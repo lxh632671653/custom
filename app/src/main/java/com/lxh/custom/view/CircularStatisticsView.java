@@ -112,9 +112,6 @@ public class CircularStatisticsView extends View {
         reminderTextPaint.setColor(mFirstColor);
         reminderTextPaint.setTextSize(textSize);
         reminderTextPaint.getTextBounds(progressText, 0, progressText.length(), reminderTextRect);
-
-
-
     }
 
     @Override
