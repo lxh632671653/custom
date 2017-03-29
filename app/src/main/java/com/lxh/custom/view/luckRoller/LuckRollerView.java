@@ -57,8 +57,11 @@ public class LuckRollerView extends RelativeLayout {
     /**
      * 速度控制
      */
-    private int speed = 0;
+    private int speed = 0,sleep = 4;
 
+    /**
+     * 转盘数据
+     */
     public static List<LuckyBean> dataList;
 
 
@@ -84,7 +87,7 @@ public class LuckRollerView extends RelativeLayout {
                 if (isStart) {
                     handler.sendEmptyMessage(1);
                     try {
-                        thread.sleep(1);
+                        thread.sleep(sleep);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -125,10 +128,8 @@ public class LuckRollerView extends RelativeLayout {
             public void onClick(View v) {
                 if (isStart) {
                     pause();
-                    imageView.setImageResource(R.mipmap.start);
                 } else {
                     startOrResume();
-                    imageView.setImageResource(R.mipmap.stop);
                 }
             }
         });
@@ -184,6 +185,7 @@ public class LuckRollerView extends RelativeLayout {
     private void pause() {
         isStart = false;
         speed = 0;
+        imageView.setImageResource(R.mipmap.start);
         calInExactArea(rotatiion);
     }
 
@@ -201,16 +203,20 @@ public class LuckRollerView extends RelativeLayout {
     /**
      * 通过计时器来设定速度和最短旋转时间
      */
-    private CountDownTimer countDownTimer = new CountDownTimer(4000,1000) {
+    private CountDownTimer countDownTimer = new CountDownTimer(sleep*1000,1000) {
         @Override
         public void onTick(long millisUntilFinished) {
             speed+=1;
+            if (sleep>1)
+            sleep-=1;
             imageView.setClickable(false);
+            imageView.setImageResource(R.mipmap.stop2);
         }
 
         @Override
         public void onFinish() {
             imageView.setClickable(true);
+            imageView.setImageResource(R.mipmap.stop);
         }
     };
 
