@@ -8,16 +8,11 @@ import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.Path;
-import android.graphics.Rect;
 import android.graphics.RectF;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
-
-import com.lxh.custom.R;
-
 import java.util.List;
 
 /**
@@ -203,10 +198,6 @@ public class LuckyRoller extends View {
         mCanvas.rotate(startAngle + 120, centerX, centerY);//画布绕中心点旋转
         mCanvas.drawBitmap(mBitmap, x - imgWidth / 2, y - imgWidth / 2, null);//绘制位图
         mCanvas.restore();//恢复画图状态到保存前
-    }
-
-    public int getmItemCount() {
-        return luckyBeanList.size();
     }
 
     /**

@@ -1,21 +1,15 @@
 package com.lxh.custom.view.luckRoller;
 
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.os.Message;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-
 import com.lxh.custom.R;
-import com.lxh.custom.view.CircularStatisticsView;
-
-import java.util.ArrayList;
 import java.util.List;
 
 /**
