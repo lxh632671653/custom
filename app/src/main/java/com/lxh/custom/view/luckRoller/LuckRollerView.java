@@ -58,7 +58,21 @@ public class LuckRollerView extends RelativeLayout {
      */
     public static List<LuckyBean> dataList;
 
+    public LuckRollerView(Context context) {
+        super(context);
+    }
 
+    public LuckRollerView(Context context, AttributeSet attrs) {
+        super(context, attrs);
+    }
+
+    public LuckRollerView(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+    }
+
+    /**
+     * 利用handler切换到UI线程进行转盘旋转
+     */
     private Handler handler = new Handler(){
         @Override
         public void handleMessage(Message msg) {
@@ -90,17 +104,6 @@ public class LuckRollerView extends RelativeLayout {
         }
     });
 
-    public LuckRollerView(Context context) {
-        super(context);
-    }
-
-    public LuckRollerView(Context context, AttributeSet attrs) {
-        super(context, attrs);
-    }
-
-    public LuckRollerView(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-    }
 
 
     /**

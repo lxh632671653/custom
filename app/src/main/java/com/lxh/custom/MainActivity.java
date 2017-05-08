@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mContext = this;
-        initView();
+//        initView();
 //        double a =  test();
 //        Log.e("TAG","====一个月积分======"+a);
 //        HorizontalProgressView horizontalProgressView = (HorizontalProgressView) findViewById(R.id.progressView);
@@ -64,16 +64,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
-    private void initView(){
-        initData();
-        luckRollerView = (LuckRollerView) findViewById(R.id.luckRollerView);
-        luckRollerView.setData(mContext,luckyBeanList);
-        luckRollerView.setOnLuckyRollerListenner(new LuckRollerView.OnLuckyRollerListenner() {
-            @Override
-            public void onFinish(String data) {
-                Toast.makeText(mContext,"恭喜你抽中了-"+data+"-",Toast.LENGTH_LONG).show();
-            }
-        });
+//    private void initView() {
+//        initData();
+//        luckRollerView = (LuckRollerView) findViewById(R.id.luckRollerView);
+//        luckRollerView.setData(mContext, luckyBeanList);
+//        luckRollerView.setOnLuckyRollerListenner(new LuckRollerView.OnLuckyRollerListenner() {
+//            @Override
+//            public void onFinish(String data) {
+//                Toast.makeText(mContext, "恭喜你抽中了-" + data + "-", Toast.LENGTH_LONG).show();
+//            }
+//        });
+
 
 
 
@@ -88,7 +89,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        circularStatisticsView.setReminderColor(Color.parseColor("#FF0000FF"));
 //        circularStatisticsView.setProgressColor(Color.parseColor("#FFFF0000"));
 //        circularStatisticsView.setCircleWidth(200);
-    }
+//}
 
     @Override
     public void onClick(View v) {
@@ -99,19 +100,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //                break;
 //
 //        }
-    }
-
-
-    private double test(){
-        float T = 10000;
-        double m = 0.0005;
-        int day = 30;
-        double JF = 0;
-        for (int i = 0;i<day;i++){
-                JF +=(T-JF)*m;
-                Log.e("TAG","前"+i+"天的积分======="+JF);
-        }
-        return JF;
     }
 }
 

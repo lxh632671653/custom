@@ -23,6 +23,9 @@ import java.util.List;
 public class LuckyRoller extends View {
 
 
+    /**
+     * padding值
+     */
     private int mPaddingLeft;
 
     /**
@@ -65,7 +68,9 @@ public class LuckyRoller extends View {
      */
     private Bitmap[] mImgsBitmap;
 
-
+    /**
+     * 转盘内容实体集合
+     */
     private List<LuckyBean> luckyBeanList;
 
     /**
@@ -224,7 +229,7 @@ public class LuckyRoller extends View {
      * @param sweepAngle
      */
     private void drawRoller(Canvas mCanvas, Paint mPaint, int i, float tmpAngle, float sweepAngle) {
-        // 绘制快快
+        // 绘制模块
         mPaint.setColor(luckyBeanList.get(i).getColor());
         mCanvas.drawArc(mRange, tmpAngle, sweepAngle, true, mPaint);
     }
