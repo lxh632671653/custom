@@ -17,9 +17,14 @@
         <!--android:layout_width="match_parent"-->
         <!--android:layout_height="3dp" />-->
 
-    <com.lxh.custom.view.luckRoller.LuckRollerView
-        android:id="@+id/luckRollerView"
-        android:layout_width="500dp"
-        android:layout_height="500dp"/>
+    <!--<com.lxh.custom.view.luckRoller.LuckRollerView-->
+        <!--android:id="@+id/luckRollerView"-->
+        <!--android:layout_width="500dp"-->
+        <!--android:layout_height="500dp"/>-->
+
+    <com.lxh.custom.view.GoogleIconView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"/>
 
 </RelativeLayout>
