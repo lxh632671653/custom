@@ -84,7 +84,6 @@ public class GoogleIconView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-
         drawCenterCycle(canvas,cyclePaint);
         drawCircular(canvas);
     }
